@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<!--onclick-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p>{{message}}</p>
+			<input v-model="message"/>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',//使用id的来取
+			data:{
+				message: "hello vue js"
+			}
+		})
+	</script>
+</html>
