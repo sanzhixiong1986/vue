@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<!--v-if判断属性-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<space v-if="seen">
+				对应的操作
+			</space>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',//使用id的来取
+			data:{
+				seen: true
+			}
+		})
+	</script>
+</html>

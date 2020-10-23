@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<!--基础的副职操作-->
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!--第一个数据显示-->
+		<div id="app">
+			{{message}}
+		</div>
+	</body>
+	<!--加载vue的文件-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',//使用id的来取
+			data:{
+				message:"hello Vue"
+			}
+		})
+		
+	</script>
+</html>
