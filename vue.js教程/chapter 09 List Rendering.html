@@ -19,19 +19,22 @@
 	</ul>
 </div>
 <script type="text/javascript">
+	//返回对应的数据ajax或者post获得数据
+	let backData = [
+		{ message: 'Foo' },
+		{ message: 'Bar' }
+	]
 var vm = new Vue({
 	el : "#app",
 	data : {
-		items : [
-			{ message: 'Foo' },
-			{ message: 'Bar' }
-		],
+		items :backData,
 		object: {
 			title: 'How to do lists in Vue',
 			author: 'Jane Doe',
 			publishedAt: '2016-04-10'
 		}
-	}
+	},
+	
 });
 </script>
 </body>
