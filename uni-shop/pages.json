@@ -4,8 +4,39 @@
 			"path":"pages/index/index" ,//操作路径
 			"style":{
 				//#ifdef MP
-				"navigationBarTitleText":"商城"
+				"navigationBarTitleText":"商城",
 				//#endif
+				//去掉上方的title操作
+				"app-plus":{
+					"bounce":"none",
+					"titleNView":{
+						"type":"transparent",
+						"searchInput":{
+							"backgroundColor":"rgba(231,231,231,.7)",	//背景颜色
+							"borderRadius":"16px",						//边框大小
+							"placeholder":"请输入关键字",
+							"disabled":false,
+							"placeholderColor":"#606266"
+						},
+						"buttons": [
+							{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue60f",
+								"fontSize": "24",
+								"color": "#303133",
+								"width": "46px",
+								"background": "rgba(0,0,0,0)"
+							},
+							{
+								"fontSrc": "/static/yticon.ttf",
+								"text": "\ue744",
+								"fontSize": "28",
+								"color": "#303133",
+								"background": "rgba(0,0,0,0)",
+								"redDot": true
+							}
+					]}
+				}
 			}
 		},
 		{
