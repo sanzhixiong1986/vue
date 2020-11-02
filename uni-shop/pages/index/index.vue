@@ -6,6 +6,36 @@
 			<input class="ser-input" type="text" value="输入关键字搜索" disabled />
 		</view>
 		<!-- #endif -->
+		<!-- 头部轮播 -->
+		<view class="carousel-section">
+			<!-- 标题栏和状态栏占位符 -->
+			<view class="titleNview-placing"></view>
+			<!-- 背景色区域 -->
+			<view class="titleNview-background" :style="{backgroundColor:titleNViewBackground}"></view>
+			<swiper class="carousel" circular>
+				<!-- <swiper-item v-for="(item, index) in carouselList" :key="index" class="carousel-item" @click="navToDetailPage({title: '轮播广告'})">
+					<image :src="item.src" />
+				</swiper-item> -->
+				
+				<swiper-item>
+					<image src="/static/temp/banner3.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image src="/static/temp/banner2.jpg"></image>
+				</swiper-item>
+				<swiper-item>
+					<image src="/static/temp/banner1.jpg"></image>
+				</swiper-item>
+			</swiper>
+			<!-- 自定义swiper指示器  根据点击的当前数量增加1为显示数据-->
+			<view class="swiper-dots">
+				<text class="num">{{swiperCurrent+1}}</text>
+				<text class="sign">/</text>
+				<text class="num">{{swiperLength}}</text>
+			</view>
+		</view>
+		
+		
 			<view 
 				v-for="(item, index) in goodsList" :key="index"
 				class="guess-item"
@@ -31,15 +61,11 @@
 					goodsList: []
 				};
 			},
-	
+			//加载完毕以后操作
 			onLoad() {
-				//this.loadData();
+				this.loadData();
 			},
 			methods: {
-				/**
-				 * 请求静态数据只是为了代码不那么乱
-				 * 分次请求未作整合
-				 */
 				async loadData() {
 					let carouselList = await this.$api.json('carouselList');
 					this.titleNViewBackground = carouselList[0].background;
@@ -49,50 +75,43 @@
 					let goodsList = await this.$api.json('goodsList');
 					this.goodsList = goodsList || [];
 				},
-				//轮播图切换修改背景色
-				swiperChange(e) {
-					const index = e.detail.current;
-					this.swiperCurrent = index;
-					this.titleNViewBackground = this.carouselList[index].background;
-				},
-				//详情页
-				navToDetailPage(item) {
-					//测试数据没有写id，用title代替
-					let id = item.title;
-					uni.navigateTo({
-						url: `/pages/product/product?id=${id}`
-					})
-				},
-			},
-			// #ifndef MP
-			// 标题栏input搜索框点击
-			onNavigationBarSearchInputClicked: async function(e) {
-				this.$api.msg('点击了搜索框');
-			},
-			//点击导航栏 buttons 时触发
-			onNavigationBarButtonTap(e) {
-				const index = e.index;
-				if (index === 0) {
-					this.$api.msg('点击了扫描');
-				} else if (index === 1) {
-					// #ifdef APP-PLUS
-					const pages = getCurrentPages();
-					const page = pages[pages.length - 1];
-					const currentWebview = page.$getAppWebview();
-					currentWebview.hideTitleNViewButtonRedDot({
-						index
-					});
-					// #endif
-					uni.navigateTo({
-						url: '/pages/notice/notice'
-					})
-				}
 			}
-			// #endif
 		}
 </script>
 
 <style lang="scss">
+	.container{
+			padding-bottom: 134upx;
+			background-color: #4399FC;
+			/* 空白页 */
+			.empty{
+				position:fixed;
+				left: 0;
+				top:0;
+				width: 100%;
+				height: 100vh;
+				padding-bottom:100upx;
+				display:flex;
+				justify-content: center;
+				flex-direction: column;
+				align-items:center;
+				background: #DD524D;
+				image{
+					width: 240upx;
+					height: 160upx;
+					margin-bottom:30upx;
+				}
+				.empty-tips{
+					display:flex;
+					font-size: $font-sm+2upx;
+					color: $font-color-disabled;
+					.navigator{
+						color: $uni-color-primary;
+						margin-left: 16upx;
+					}
+				}
+			}
+		}
 	/* #ifdef MP */
 		.mp-search-box{
 			position:absolute;
