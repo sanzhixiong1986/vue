@@ -1,18 +1,11 @@
 <template>
-	<view class="container">
-		<!--搜索框-->
-		<view class="mp-search-box">
-			<input />
-		</view>
-	</view>
+	
 </template>
 
 <script>
 	export default {
 		data() {
-			return {
-				title: 'Hello'
-			}
+			
 		},
 		onLoad() {
 
@@ -23,34 +16,30 @@
 	}
 </script>
 
-<style>
+<styls lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
 	
 	.mp-search-box{
 		position:absolute;
+		left: 0;
+		top: 30upx;
+		z-index: 9999;
+		width: 100%;
+		padding: 0 80upx;
+		.ser-input{
+			flex:1;
+			height: 56upx;
+			line-height: 56upx;
+			text-align: center;
+			font-size: 28upx;
+			color:$font-color-base;
+			border-radius: 20px;
+			background: rgba(255,255,255,.6);
+		}
 	}
 </style>
