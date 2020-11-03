@@ -41,11 +41,8 @@
 		{
 			"path":"pages/category/category",
 			"style": {
-				"navigationBarTitleText": "详情展示",
 				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
+					"titleNView": false
 				}
 			}
 		},

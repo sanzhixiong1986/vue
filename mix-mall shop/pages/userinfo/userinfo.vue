@@ -81,6 +81,4 @@
 			bottom: 16upx;
 		}
 	}
-
-
 </style>
