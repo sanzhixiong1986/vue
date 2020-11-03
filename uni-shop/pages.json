@@ -70,6 +70,17 @@
 					}
 				}
 			}
+		},
+		{
+			"path":"pages/public/login",
+			"style": {
+				"navigationBarTitleText": "登陆",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
 		}
 	],
 	"tabBar":{
