@@ -219,7 +219,6 @@
 </template>
 <script>
 	export default {
-	
 			data() {
 				return {
 					titleNViewBackground: '',
@@ -246,6 +245,8 @@
 					
 					let goodsList = await this.$api.json('goodsList');
 					this.goodsList = goodsList || [];
+					
+					
 				},
 				//轮播图切换修改背景色
 				swiperChange(e) {
@@ -261,6 +262,9 @@
 						url: `/pages/product/product?id=${id}`
 					})
 				},
+				onTabItemTap(e){
+					console.log(e)
+				}
 			},
 			// #ifndef MP
 			// 标题栏input搜索框点击
@@ -287,7 +291,11 @@
 				}
 			}
 			// #endif
+			
+			
 		}
+		
+		
 </script>
 
 <style lang="scss">	
