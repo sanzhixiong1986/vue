@@ -41,6 +41,7 @@
 		{
 			"path":"pages/category/category",
 			"style": {
+				"navigationBarTitleText": "分类详情",
 				"app-plus": {
 					"titleNView": false
 				}
@@ -49,22 +50,18 @@
 		{
 			"path":"pages/cart/cart",
 			"style": {
-				"navigationBarTitleText": "详情展示",
+				"navigationBarTitleText": "购物车详情",
 				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
+					"titleNView": false
 				}
 			}
 		},
 		{
 			"path":"pages/user/user",
 			"style": {
-				"navigationBarTitleText": "详情展示",
+				"navigationBarTitleText": "个人详情展示",
 				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
+					"titleNView": false
 				}
 			}
 		},
