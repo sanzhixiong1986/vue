@@ -87,6 +87,15 @@
 			"style" : {
 				"navigationBarTitleText": "通知"
 			}
+		},
+		{
+			"path": "pages/order/order",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
 		}
 	],
 	"tabBar":{

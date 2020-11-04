@@ -51,6 +51,7 @@
 
 			navTo(url){
 				this.$api.msg(`跳转到${url}`);
+				console.log("打开了"+url);
 			},
 			//退出登录
 			toLogout(){
