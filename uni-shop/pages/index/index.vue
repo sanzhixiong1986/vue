@@ -47,7 +47,7 @@
 					<text>速食生鲜</text>
 				</view>
 			</view>
-			
+			<!-- 广告 -->
 			<view class="ad-1">
 				<image src="/static/temp/ad1.jpg" mode="scaleToFill"></image>
 			</view>

@@ -75,6 +75,18 @@
 					}
 				}
 			}
+		},
+		{
+			"path": "pages/set/set",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+		    "path" : "pages/notice/notice",
+			"style" : {
+				"navigationBarTitleText": "通知"
+			}
 		}
 	],
 	"tabBar":{
