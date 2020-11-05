@@ -108,6 +108,13 @@
 			"style": {
 				"navigationBarTitleText": "修改"
 			}
+		},
+		{
+			"path" : "pages/product/list",
+			"style" : {
+				"enablePullDownRefresh": true,
+				"navigationBarTitleText": "商品列表"
+			}
 		}
 	],
 	"tabBar":{
