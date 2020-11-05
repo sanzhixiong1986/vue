@@ -96,6 +96,12 @@
 					"bounce": "none"
 				}
 			}
+		},
+		{
+			"path": "pages/address/address",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
 		}
 	],
 	"tabBar":{
