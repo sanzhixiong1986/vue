@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<view class="navbar" :style="{position:headerPosition,top:headerTop}">
+		<view class="navbar" :style="{position:headerPosition}">
 			<view class="nav-item" :class="{current: filterIndex === 0}" @click="tabClick(0)">
 				综合排序
 			</view>
@@ -76,7 +76,7 @@
 		
 		onLoad(options){
 			// #ifdef H5
-			this.headerTop = document.getElementsByTagName('uni-page-head')[0].offsetHeight+'px';
+			// this.headerTop = document.getElementsByTagName('uni-page-head')[0].offsetHeight+'px';
 			// #endif
 			this.cateId = options.tid;
 			this.loadCateList(options.fid,options.sid);
