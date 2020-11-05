@@ -76,6 +76,7 @@
 		
 		onLoad(options){
 			// #ifdef H5
+			//隐藏的头的操作以后获取不到数据
 			// this.headerTop = document.getElementsByTagName('uni-page-head')[0].offsetHeight+'px';
 			// #endif
 			this.cateId = options.tid;
