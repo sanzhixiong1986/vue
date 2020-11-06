@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>第二章选择器</title>
+	<style>
+		h2{
+			color: gray;
+			background: black;
+		}
+		p{
+			color: red;
+			font-weight: bold;
+			background: black;
+		}
+		/**
+		 * 	类选择器
+		 	其中.代表类选择器，后面的demo代表名字，而那个标签要使用类选择器就在那个标签中使用class=类选择器的名字这种方式，详情查看demo1 和demo2 他就是编程里面哪些对象是一个意思，如果想用对象，就把这个对象对应的属性副职到这个对象上，这个运用可以批量生产想用的自定义效果
+		 */
+		.demo1{
+			color: green;
+		}
+		/**
+		 * id选择器使用方式：#表示要给id选择容器进行操作，但是大多数网站都是把id给js进行操作，而js对id的条件是唯一的条件操作
+		 * 
+		 */
+		#demo3{
+			color: yellow;
+		}
+		/**
+		 * 说明：h1 是父节点，然后em是对应的字节点操作，这样实际就是h1下面的em元素的样式变成红色，请查看demo5的操作
+		 */
+		h1 em{
+			color: red;
+		}
+		/**
+		 * h1是父亲元素，> 指向告诉浏览器这个后面是子元素,他与 h1 em 这个主要的区别是class和id的区别，一个是成批量一个特定
+		 */
+		h1 > strong{
+			color: green;
+		}
+
+		/**
+		 * 
+		 */
+		h3 + b{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>选择器</h1>
+	<h2><font color='gray'>基础规则</font></h2>
+	<p>这种方式适用单独处理的操作，大量的不适用这种方式</p>
+	<h2>规则结构</h2>
+	<p>选择器：你需要改变的元素，然后是对应的属性和对应的数值</p>
+	<h2>选择分组</h2>
+	<p>现在适用的标签style操作了h2标签为统一颜色处理</p>
+	<p>多个标签同一个操作使用逗号分开</p>
+	<h2>全部进行适配</h2>
+	<p>*{}进行操作，其中*代表所有的原色都遵从这个规则</p>
+	<h2>类选择器和id选择器</h2>
+	<ul>
+		<li>类选择器</li>
+		<li>类选择器使用方式标签里增加class属性然后=“类选择器的名字”，见demo</li>
+		<li>id选择器</li>
+		<li>id选择器是在标签里面使用id属性=id名字的方式，见demo3和demo4</li>
+		<li>后代选择器</li>
+		<li>操作方式 父节点的元素 空格 子元素操作实例demo5</li>
+		<li>选择子元素</li>
+		<li>操作方式父元素 > 子元素 实际操作请看demo6</li>
+		<li>相邻兄弟选择</li>
+		<li>元素1 + 元素2（demo请见7）</li>
+	</ul>
+	<div class="demo1">demo1</div>
+	<div class="demo1">demo2</div>
+	<div id="demo3">demo3</div>
+	<div id="demo3">demo4</div>
+	<h1><em>demo5</em></h1>
+	<h1>demo6<strong>demo6</strong></h1>
+	<div>
+		<h3>
+			demo71
+		</h3>
+		<b>demo7</b>	
+	</div>
+</body>
+</html>
