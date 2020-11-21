@@ -1,8 +1,9 @@
-/*這裡是對有一些標籤進行編寫*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,34 +17,25 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  /*這個是一個對應的操作有一個上下左右的操作*/
   margin: 0;
-  /*邊距 測試100px，這個是每一個元素都離上一個元素100px*/
-  padding:0;
-  /*沒有邊框*/
+  padding: 0;
   border: 0;
-  /*就是跟父節點的大小一樣*/
   font-size: 100%;
-  /*繼承父親的字體樣式*/
   font: inherit;
-  /*把当前盒的基线与父级盒的基线对齐。如果该盒没有基线，就将底部外边距的边界和父级的基线对齐*/
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  /*指定对象为块元素*/
   display: block;
 }
 body {
-	/*检索或设置对象的行高。即字体最底端与字体内部顶端之间的距离。*/
   line-height: 1;
 }
 ol, ul {
   list-style: none;
 }
 blockquote, q {
-	/*设置或检索对象内使用的嵌套标记*/
   quotes: none;
 }
 blockquote:before, blockquote:after,

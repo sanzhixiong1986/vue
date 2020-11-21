@@ -2,14 +2,34 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
-
+import VueRouter from 'vue-router'
+// import iView from 'iview';
+import 'iview/dist/styles/iview.css';    // 使用 CSS
+import goods from './components/goods/goods.vue'
+import seller from './components/seller/seller.vue'
+import VueResource from 'vue-resource'
+import ratings from './components/tatings/ratings.vue'
+Vue.use(VueRouter)
+Vue.use(VueResource)
+// Vue.use(iView);
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+const routes = [
+  {
+    path: '/',
+    name: 'index',
+    component: App,
+    children: [{path: '/goods', component: goods}, {path: '/seller', component: seller}, {
+      path: '/ratings', component: ratings
+    }]
+  }
+]
+let router = new VueRouter({
+  linkActiveClass: 'active',
+  routes
 })
+
+new Vue({
+  router
+}).$mount('#app')
+router.push('/goods')
