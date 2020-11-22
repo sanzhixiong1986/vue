@@ -46,4 +46,9 @@ Author 作者
 
 #### 5.运行你的项目
 
-先进入目录下，在命令窗口执行 npm run dev 就可以运行你的项目 
+先进入目录下，在命令窗口执行 npm run dev 就可以运行你的项目
+
+#### 6.入门的项目
+
+[入门项目](https://github.com/sanzhixiong1986/vue/tree/main/cli/demo1)
+
