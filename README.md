@@ -10,3 +10,4 @@
 
 5.[__UNI__401CC41_1105184352.apk](https://github.com/sanzhixiong1986/vue/blob/develop/__UNI__401CC41_1105184352.apk)他是打包的uni-shop的安装版本
 
+6.vue cli 基础操作
